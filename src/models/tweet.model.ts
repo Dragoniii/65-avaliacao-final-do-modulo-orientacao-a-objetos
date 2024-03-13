@@ -1,4 +1,5 @@
 import { randomUUID } from 'crypto';
+import { tweets } from "../service/tweets.db";
 
 export class Tweet {
     private _id: string
