@@ -1,29 +1,30 @@
 import { randomUUID } from 'crypto';
-import { tweets } from "../service/tweets.db";
 
 export class Tweet {
     private _id: string
-    private _kind: boolean
-    private _statement: string
-    private _userID: string
+    private _type: string
+    private _content: string
 
-    constructor(kind: boolean, statement: string, userID: string) {
+    constructor(type: string, content: string) {
         this._id = randomUUID()
-        this._kind = kind
-        this._statement = statement
-        this._userID = userID
+        this._type = type
+        this._content = content
     }
 
-    public get id() {
-        return this._id
+    public reply(content: any) {
+       const provisoria = content
     }
-    public get kind() {
-        return this._kind
+
+    private like() {
+
     }
-    public get statement() {
-        return this._statement
+
+    private show() {
+
     }
-    public get userID() {
-        return this._userID
+
+    private showReplies() {
+
     }
+
 }

@@ -7,4 +7,9 @@ export class UserService implements IUser {
     create(newUser: User): void {
         this.users.push(newUser);
     }
+
+    get getUsers(): User[] {
+        return this.users;
+    }
+    
 }

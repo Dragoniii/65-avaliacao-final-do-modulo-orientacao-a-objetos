@@ -1,12 +1,14 @@
 import { randomUUID } from 'crypto';
+import { Tweet } from "./tweet.model";
 
-
-export class User{
+export class User {
     private _id: string
     private _name: string
     private _email: string
     private _userName: string
     private _password: string
+
+    private following: string[] = [];
 
     constructor(name: string, email: string, userName: string, password: string) {
         this._id = randomUUID()
@@ -16,19 +18,20 @@ export class User{
         this._password = password
     }
 
-    public get id() {
-        return this._id
+    public sendTweet(tweet: Tweet) {
+
     }
-    public get name() {
-        return this._name
+
+    public follow(user: User) {
+        this.following.push(user._id);
     }
-    public get email() {
-        return this._email
+
+    public showFeed() {
+
     }
-    public get userName() {
-        return this._userName
+
+    public showTweets() {
+
     }
-    public get password() {
-        return this._password
-    }
+
 }
